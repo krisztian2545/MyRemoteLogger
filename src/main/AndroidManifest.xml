@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hu.learningproject.myremotelogger">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:name=".Logger"
+        android:usesCleartextTraffic="true"
+        />
+</manifest>

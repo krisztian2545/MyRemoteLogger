@@ -24,6 +24,7 @@ public class Logger extends Application {
   private static RequestQueue requestQueue;
   private static String url = "http://localhost:5000";
   
+  // this will be removed
   private static boolean showToastResponses = false;
   
   @Override
@@ -31,8 +32,6 @@ public class Logger extends Application {
     super.onCreate();
     instance = this;
     
-    // totally not necessary
-    giveLifeSignal();
   }
   
   public static void setUrl(String newUrl) {
@@ -89,10 +88,6 @@ public class Logger extends Application {
   
   public static void debug(String message) {
     getInstance().addToRequestQueue( getInstance().createJsonPostRequest("DEBUG: " + message) );
-  }
-  
-  public static void giveLifeSignal() {
-    ezToast("It's working!");
   }
   
   private static void ezToast(String message) {
